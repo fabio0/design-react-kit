@@ -199,7 +199,7 @@ class Input extends React.Component {
           {
             attributes.type === 'password'
             ?
-            <span className="password-icon" aria-hidden="true">
+            (<span className="password-icon" aria-hidden="true">
               <svg
                 className="password-icon-visible icon icon-sm"
                 onClick={this.toggleShow}>
@@ -209,7 +209,7 @@ class Input extends React.Component {
                   }`}
                 />
               </svg>
-            </span>
+            </span>)
             : null
           }
           <label htmlFor={this.props.id} className="active">
