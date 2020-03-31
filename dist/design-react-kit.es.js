@@ -1510,7 +1510,7 @@ function (_React$Component) {
       delete attributes.children;
     }
 
-    if (placeholder || value) {
+    if ((placeholder || value) && attributes.type !== 'password') {
       return React.createElement("div", {
         className: wrapperClass
       }, React.createElement(Tag, _extends({}, attributes, {
@@ -1523,15 +1523,7 @@ function (_React$Component) {
         },
         placeholder: this.props.placeholder,
         value: this.props.value
-      })), attributes.type === 'password' ? React.createElement("span", {
-        className: "password-icon",
-        "aria-hidden": "true"
-      }, React.createElement("svg", {
-        className: "password-icon-visible icon icon-sm",
-        onClick: this.toggleShow
-      }, React.createElement("use", {
-        xlinkHref: iconSprite + "#it-password-" + (this.state.icon ? 'visible' : 'invisible')
-      }))) : null, React.createElement("label", {
+      })), React.createElement("label", {
         htmlFor: this.props.id,
         className: "active"
       }, this.props.label), React.createElement("small", {
