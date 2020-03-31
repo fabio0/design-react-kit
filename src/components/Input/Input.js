@@ -4,6 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Util } from 'reactstrap'
+import iconSprite from 'bootstrap-italia/dist/svg/sprite.svg'
 
 const { mapToCssModules, deprecated, warnOnce } = Util
 
@@ -225,7 +226,7 @@ class Input extends React.Component {
               className="password-icon-visible icon icon-sm"
               onClick={this.toggleShow}>
               <use
-                xlinkHref={`/svg/sprite.svg#it-password-${
+                xlinkHref={`${iconSprite}#it-password-${
                   this.state.icon ? 'visible' : 'invisible'
                 }`}
               />
