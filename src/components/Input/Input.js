@@ -196,6 +196,22 @@ class Input extends React.Component {
             placeholder={this.props.placeholder}
             value={this.props.value}
           />
+          {
+            attributes.type === 'password'
+            ?
+            <span className="password-icon" aria-hidden="true">
+              <svg
+                className="password-icon-visible icon icon-sm"
+                onClick={this.toggleShow}>
+                <use
+                  xlinkHref={`${iconSprite}#it-password-${
+                    this.state.icon ? 'visible' : 'invisible'
+                  }`}
+                />
+              </svg>
+            </span>
+            : null
+          }
           <label htmlFor={this.props.id} className="active">
             {this.props.label}
           </label>

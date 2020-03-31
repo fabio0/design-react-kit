@@ -1523,7 +1523,15 @@ function (_React$Component) {
         },
         placeholder: this.props.placeholder,
         value: this.props.value
-      })), React.createElement("label", {
+      })), attributes.type === 'password' ? React.createElement("span", {
+        className: "password-icon",
+        "aria-hidden": "true"
+      }, React.createElement("svg", {
+        className: "password-icon-visible icon icon-sm",
+        onClick: this.toggleShow
+      }, React.createElement("use", {
+        xlinkHref: iconSprite + "#it-password-" + (this.state.icon ? 'visible' : 'invisible')
+      }))) : null, React.createElement("label", {
         htmlFor: this.props.id,
         className: "active"
       }, this.props.label), React.createElement("small", {

@@ -14306,7 +14306,15 @@
           },
           placeholder: this.props.placeholder,
           value: this.props.value
-        })), React__default.createElement("label", {
+        })), attributes.type === 'password' ? React__default.createElement("span", {
+          className: "password-icon",
+          "aria-hidden": "true"
+        }, React__default.createElement("svg", {
+          className: "password-icon-visible icon icon-sm",
+          onClick: this.toggleShow
+        }, React__default.createElement("use", {
+          xlinkHref: iconSprite + "#it-password-" + (this.state.icon ? 'visible' : 'invisible')
+        }))) : null, React__default.createElement("label", {
           htmlFor: this.props.id,
           className: "active"
         }, this.props.label), React__default.createElement("small", {
