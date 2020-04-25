@@ -37,7 +37,7 @@ class HeaderContent extends PureComponent {
         <div className={classes} {...attributes} />
       )
     return (
-      <div className="container">
+      <div className={"container " + ((props.fluid) ? 'fluid' : '')}>
         <div className="row">
           <div className="col-12">{Content}</div>
         </div>
