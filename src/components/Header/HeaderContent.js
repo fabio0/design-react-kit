@@ -10,7 +10,7 @@ const propTypes = {
   className: PropTypes.string,
   /** Da utilizzare per indicare che all'interno dell'Header verrà utilizzato un Megamenu */
   megamenu: PropTypes.bool,
-  
+
   fluid: PropTypes.bool,
   /** Parametro per il controllo responsive del componente: valori Bootstrap standard sono "sm", "md", "lg", "xl" */
   expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
@@ -44,7 +44,7 @@ class HeaderContent extends PureComponent {
         <div className={classes} {...attributes} />
       )
     return (
-      <div className={"container" + this.getClass()}>
+      <div className={'container' + this.getClass()}>
         <div className="row">
           <div className="col-12">{Content}</div>
         </div>
