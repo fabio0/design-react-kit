@@ -20,6 +20,11 @@ class HeaderContent extends PureComponent {
   static propTypes = propTypes
   static defaultProps = defaultProps
   static contextType = HeaderContext
+
+  getClass() {
+    return this.props.fluid ? ' fluid' : '';
+  }
+
   render() {
     const { className, megamenu, ...attributes } = this.props
     const { type } = this.context
@@ -37,7 +42,7 @@ class HeaderContent extends PureComponent {
         <div className={classes} {...attributes} />
       )
     return (
-      <div className={"container " + ((props.fluid) ? 'fluid' : '')}>
+      <div className={"container" + this.getClass()}>
         <div className="row">
           <div className="col-12">{Content}</div>
         </div>
