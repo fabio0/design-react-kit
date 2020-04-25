@@ -10,6 +10,8 @@ const propTypes = {
   className: PropTypes.string,
   /** Da utilizzare per indicare che all'interno dell'Header verrà utilizzato un Megamenu */
   megamenu: PropTypes.bool,
+  
+  fluid: PropTypes.bool,
   /** Parametro per il controllo responsive del componente: valori Bootstrap standard sono "sm", "md", "lg", "xl" */
   expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
 }
