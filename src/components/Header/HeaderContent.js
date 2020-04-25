@@ -24,7 +24,7 @@ class HeaderContent extends PureComponent {
   static contextType = HeaderContext
 
   getClass() {
-    return this.props.fluid ? ' fluid' : '';
+    return this.props.fluid ? ' fluid' : ''
   }
 
   render() {
